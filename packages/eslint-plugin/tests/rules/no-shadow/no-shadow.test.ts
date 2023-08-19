@@ -66,6 +66,15 @@ namespace Foo {
 }
     `,
     `
+namespace Foo {
+  export const v = 2;
+  interface Bar {
+    baz: string;
+  }
+}
+declare const Foo = Foo.Bar;
+    `,
+    `
 class Foo {
   prop = 1;
 }
